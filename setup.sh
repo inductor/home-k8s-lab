@@ -13,7 +13,7 @@ KUBE_CONTExT=`kubectl config current-context`
 while true; do
     read -p "The current context is \"$KUBE_CONTExT\". Would you like to proceed? (y/n)" yn
     case $yn in
-        [Yy]* ) kubectl apply -f apps/projects.yaml; kubectl apply -f apps/; echo "The cluster setup has succesfully done!"; break;;
+        [Yy]* ) kubectl apply -f $SCRIPTPATH/apps/projects.yaml; kubectl apply -f $SCRIPTPATH/root-apps.yaml; echo "The cluster setup has succesfully done!"; break;;
         [Nn]* ) echo "Setup has been cancelled!"; exit;;
         * ) echo "Please answer yes or no.";;
     esac

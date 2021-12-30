@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps
+  namespace: argocd
+spec:
+  project: infra
+  source:
+    repoURL: https://github.com/inductor/home-k8s-lab.git
+    targetRevision: HEAD
+    path: apps
+    # kustomize:
+    #   version: v4.4.0
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd

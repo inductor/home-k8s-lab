@@ -9,8 +9,8 @@ spec:
     repoURL: https://github.com/inductor/home-k8s-lab.git
     targetRevision: HEAD
     path: manifests/metallb
-    kustomize:
-      version: v4.4.0
+    # kustomize:
+    #   version: v4.4.0
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system

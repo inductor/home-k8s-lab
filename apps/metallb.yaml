@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: manifests/metallb
     kustomize:
-      version: v4.4.1
+      version: v4.4.0
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system

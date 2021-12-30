@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: manifests/local-path-provisioner
     kustomize:
-      version: v4.4.1
+      version: v4.4.0
   destination:
     server: https://kubernetes.default.svc
     namespace: local-path-storage

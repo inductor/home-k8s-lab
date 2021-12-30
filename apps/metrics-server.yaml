@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     path: manifests/metrics-server
     kustomize:
-      version: v4.4.1
+      version: v4.4.0
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system

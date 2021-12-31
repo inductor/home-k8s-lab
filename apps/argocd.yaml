@@ -23,11 +23,6 @@ spec:
             application.instanceLabelKey: argocd.argoproj.io/instance
             kustomize.buildOptions: --load-restrictor LoadRestrictionsNone
             kustomize.buildOptions.v4.4.0: --output /tmp
-          service:
-            annotations:
-              projectcontour.io/upstream-protocol.h2c: "https,443"
-          extraArgs:
-            - --insecure
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd

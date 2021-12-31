@@ -6,9 +6,9 @@ metadata:
 spec:
   project: infra
   source:
-    repoURL: https://github.com/inductor/home-k8s-lab.git
+    repoURL: https://github.com/kubernetes/ingress-nginx.git
     targetRevision: HEAD
-    path: manifests/ingress-nginx
+    path: deploy/prometheus/
     # kustomize:
     #   version: v4.4.0
   destination:

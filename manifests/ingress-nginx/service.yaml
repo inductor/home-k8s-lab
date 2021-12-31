@@ -8,6 +8,6 @@ metadata:
   namespace: ingress-nginx
 spec:
   ports:
-    - name: prometheus
+    - name: metrics
       port: 10254
-      targetPort: prometheus
+      targetPort: metrics

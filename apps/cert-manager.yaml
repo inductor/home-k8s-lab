@@ -1,19 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: local-path-provisioner
+  name: cert-manager
   namespace: argocd
 spec:
   project: infra
   source:
-    repoURL: https://github.com/inductor/home-k8s-lab.git
-    targetRevision: HEAD
-    path: manifests/local-path-provisioner
-    # kustomize:
-    #   version: v4.4.0
+    chart: cert-manager
+    repoURL: https://charts.jetstack.io
+    targetRevision: v1.6.1
+    helm:
+      releaseName: cert-manager
+      values: |
+        installCRDs: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: local-path-storage
+    namespace: cert-manager
   syncPolicy:
     automated:
       prune: true

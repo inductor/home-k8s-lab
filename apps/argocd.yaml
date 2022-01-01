@@ -38,7 +38,7 @@ spec:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
-              namespace: "monitoring"
+              namespace: "argocd"
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
             rules:
@@ -108,7 +108,7 @@ spec:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
-              namespace: "monitoring"
+              namespace: "argocd"
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
         ## Dex
@@ -130,7 +130,7 @@ spec:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
-              namespace: "monitoring"
+              namespace: "argocd"
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
         redis:
@@ -181,7 +181,7 @@ spec:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
-              namespace: "monitoring"
+              namespace: "argocd"
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
         ## Repo Server
@@ -211,7 +211,7 @@ spec:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
-              namespace: "monitoring"
+              namespace: "argocd"
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
   destination:

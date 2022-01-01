@@ -157,7 +157,7 @@ spec:
             # -- Port to use for redis-exporter sidecar
             containerPort: 9121
             # -- Resource limits and requests for redis-exporter sidecar
-            resources: {}
+            resources:
               limits:
                 cpu: 100m
                 memory: 128Mi

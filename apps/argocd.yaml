@@ -13,6 +13,9 @@ spec:
       releaseName: argocd
       values: |
         controller:
+          podAnnotations:
+            prometheus.io/scrape: 'true'
+            prometheus.io/port: '8082'
           ## Application controller metrics configuration
           metrics:
             # -- Deploy metrics service
@@ -83,6 +86,9 @@ spec:
             application.instanceLabelKey: argocd.argoproj.io/instance
             kustomize.buildOptions: --load-restrictor LoadRestrictionsNone
             kustomize.buildOptions.v4.4.0: --output /tmp
+          podAnnotations:
+            prometheus.io/scrape: 'true'
+            prometheus.io/port: '8083'
           ## Server metrics service configuration
           metrics:
             # -- Deploy metrics service
@@ -134,6 +140,9 @@ spec:
               # -- Prometheus ServiceMonitor labels
               additionalLabels: {}
         redis:
+          podAnnotations:
+            prometheus.io/scrape: 'true'
+            prometheus.io/port: '9121'
           metrics:
             # -- Deploy metrics service and redis-exporter sidecar
             enabled: true
@@ -186,6 +195,9 @@ spec:
               additionalLabels: {}
         ## Repo Server
         repoServer:
+          podAnnotations:
+            prometheus.io/scrape: 'true'
+            prometheus.io/port: '8084'
           ## Repo server metrics service configuration
           metrics:
             # -- Deploy metrics service

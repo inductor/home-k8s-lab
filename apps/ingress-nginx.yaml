@@ -115,4 +115,4 @@ spec:
                     summary: More than 5% of all requests returned 4XX, this requires your attention
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: ingress-nginx

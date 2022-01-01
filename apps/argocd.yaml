@@ -39,7 +39,7 @@ spec:
               # -- Prometheus [MetricRelabelConfigs] to apply to samples before ingestion
               metricRelabelings: []
               # -- Prometheus ServiceMonitor selector
-              selector: {}
+              selector:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
@@ -109,7 +109,7 @@ spec:
               # -- Prometheus [MetricRelabelConfigs] to apply to samples before ingestion
               metricRelabelings: []
               # -- Prometheus ServiceMonitor selector
-              selector: {}
+              selector:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace
@@ -136,7 +136,7 @@ spec:
               # -- Prometheus [MetricRelabelConfigs] to apply to samples before ingestion
               metricRelabelings: []
               # -- Prometheus ServiceMonitor selector
-              selector: {}
+              selector:
                 prometheus: kube-prometheus
 
               # -- Prometheus ServiceMonitor namespace

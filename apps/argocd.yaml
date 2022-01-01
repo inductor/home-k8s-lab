@@ -119,6 +119,9 @@ spec:
               additionalLabels: {}
         ## Dex
         dex:
+          podAnnotations:
+            prometheus.io/scrape: 'true'
+            prometheus.io/port: '5558'
           metrics:
             # -- Deploy metrics service
             enabled: true

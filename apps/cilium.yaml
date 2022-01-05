@@ -22,6 +22,7 @@ spec:
             - flow
             - icmp
             - http
+            - port-distribution
             serviceMonitor:
               enabled: true
         operator:

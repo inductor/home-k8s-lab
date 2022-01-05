@@ -4,7 +4,7 @@ metadata:
   name: cilium
   namespace: kube-system
 spec:
-  project: default
+  project: infra
   source:
     chart: cilium
     repoURL: https://helm.cilium.io/

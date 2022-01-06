@@ -21,12 +21,12 @@ else
     exit 1
 fi
 
-KUBE_CONTExT=`kubectl config current-context`
+KUBE_CONTEXT=`kubectl config current-context`
 
 if kubectl get applications ; then
     echo "ArgoCD found. Install proceeding."
 else
-    read -p "ArgoCD not found on your cluster. Would you like to install it? (y/n)" yn
+    read -p "ArgoCD not found on \"$KUBE_CONTEXT\". Would you like to install it? (y/n)" yn
     case $yn in
         [Yy]* ) helm install argocd --create-namespace -n argocd argo/argo-cd; helm ls -n argocd;;
         [Nn]* ) echo "Setup has been cancelled!"; exit 1;;
@@ -35,7 +35,7 @@ else
 fi
 
 while true; do
-    read -p "The current context is \"$KUBE_CONTExT\". Would you like to proceed? (y/n)" yn
+    read -p "The current context is \"$KUBE_CONTEXT\". Would you like to proceed? (y/n)" yn
     case $yn in
         [Yy]* ) kubectl apply -f $SCRIPTPATH/projects/projects.yaml; kubectl apply -f $SCRIPTPATH/root-apps.yaml; echo "The cluster setup has succesfully done!"; break;;
         [Nn]* ) echo "Setup has been cancelled!"; exit;;
